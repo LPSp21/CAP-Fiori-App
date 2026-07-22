@@ -1,0 +1,5 @@
+ID,incident_ID,agent_ID,role_code
+20000000-0000-4000-8000-000000000001,0d2275f3-5ed5-4ed8-9066-25d3b097338a,aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa,technicalSupport
+20000000-0000-4000-8000-000000000002,0d2275f3-5ed5-4ed8-9066-25d3b097338a,cccccccc-cccc-4ccc-8ccc-cccccccccccc,incidentManager
+20000000-0000-4000-8000-000000000003,27bf4545-ebc2-483b-9afb-fdffac405180,bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb,technicalSupport
+20000000-0000-4000-8000-000000000005,27bf4545-ebc2-483b-9afb-fdffac405180,dddddddd-dddd-4ddd-8ddd-dddddddddddd,communicationLead

@@ -1,0 +1,5 @@
+code,name,descr
+C,critical,Immediate processing required
+H,high,High urgency
+M,medium,Medium urgency
+L,low,Low urgency

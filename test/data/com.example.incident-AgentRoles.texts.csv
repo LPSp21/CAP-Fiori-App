@@ -1,0 +1,5 @@
+locale,code,name,descr
+de,technicalSupport,Technischer Support,Analysiert technische Probleme und behebt technische Störungen
+de,incidentManager,Incident Manager,Koordiniert und steuert den Incident-Bearbeitungsprozess
+de,communicationLead,Kommunikationsleitung,Steuert die Kommunikation mit Kunden und Stakeholdern
+de,serviceDesk,Service Desk,Nimmt Incidents auf und leistet First-Level-Support

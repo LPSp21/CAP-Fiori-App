@@ -1,0 +1,6 @@
+code,name,descr
+1,low,Low impact
+2,moderate,Moderate impact
+3,significant,Significant impact
+4,high,High impact
+5,critical,Critical impact

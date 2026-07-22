@@ -1,0 +1,7 @@
+code,locale,name,descr
+R,de,Gemeldet,Incident wurde gemeldet
+A,de,Zugewiesen,Incident wurde zugewiesen
+P,de,In Bearbeitung,Incident wird bearbeitet
+O,de,Wartend,Incident ist auf Wartestellung
+S,de,Gelöst,Incident wurde gelöst
+C,de,Geschlossen,Incident wurde geschlossen

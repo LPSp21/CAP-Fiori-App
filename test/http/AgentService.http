@@ -1,0 +1,260 @@
+@server=http://localhost:4004
+@username=agent2
+@password=secret
+
+### Testaktualisierung eigener Supportfall
+# @name Incidents_PATCH
+PATCH {{server}}/agent/Incidents/0d2275f3-5ed5-4ed8-9066-25d3b097338a
+Content-Type: application/json
+Accept: application/json
+Authorization: Basic {{username}}:{{password}}
+Prefer: return=representation
+
+{
+  "title": "Neuer Titel"
+}
+
+### Testaktualisierung fremder Supportfall
+# @name Incidents_PATCH
+PATCH {{server}}/agent/Incidents/27bf4545-ebc2-483b-9afb-fdffac405180
+Content-Type: application/json
+Accept: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "title": "Neuer Titel"
+}
+
+### Test zur Eskalation eines Supportfalls
+# @name Incidents_POST
+POST {{server}}/agent/Incidents/0d2275f3-5ed5-4ed8-9066-25d3b097338a/
+AgentService.escalateIncident
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+ 
+{"comment": "Test"}
+
+
+### Test zur Ermittlung der Arbeitslast eines Mitarbeitenden
+# @name Incidents_GET
+GET {{server}}/admin/getAgentWorkload(agentID='61fc8a7f-cf8e-49c1-9b9d-a0e1d64adc13')
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+### Incidents
+# @name Incidents_GET
+GET {{server}}/agent/Incidents
+Authorization: Basic {{username}}:{{password}}
+
+
+### Incidents
+# @name Incidents_PATCH
+PATCH {{server}}/agent/Incidents/15998613-84b0-40a2-ae34-37392fbf512b
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "15998613-84b0-40a2-ae34-37392fbf512b",
+  "customer": {
+    "ID": "91980316-0541-484f-9a35-267fdede779c"
+  },
+  "title": "title-15998613",
+  "description": "description-15998613",
+  "status": {
+    "code": "S"
+  },
+  "urgency": {
+    "code": "C"
+  },
+  "severity": {
+    "code": 17644604
+  },
+  "comments": [
+    {
+      "ID": "12782619-56e2-48f0-832c-3667eeb99049",
+      "timestamp": "2011-05-12T00:00:00.000Z",
+      "author": "author.7lz4r@example.com",
+      "message": "message-12782619"
+    },
+    {
+      "ID": "12782620-048a-4918-953c-b060737111ff",
+      "timestamp": "2001-01-07T00:00:00.000Z",
+      "author": "author.7lz4s@example.com",
+      "message": "message-12782620"
+    }
+  ],
+  "customerName": "customerName-15998613",
+  "createdAt": "2005-08-16T00:00:00.000Z",
+  "createdBy": "createdBy.9iwlx@example.org",
+  "modifiedAt": "2001-03-30T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.9iwlx@example.net"
+}
+
+
+### Incidents
+# @name Incidents_DELETE
+DELETE {{server}}/agent/Incidents/15998613-84b0-40a2-ae34-37392fbf512b
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Customers
+# @name Customers_GET
+GET {{server}}/agent/Customers
+Authorization: Basic {{username}}:{{password}}
+
+
+### LatestIncidents
+# @name LatestIncidents_GET
+GET {{server}}/agent/LatestIncidents
+Authorization: Basic {{username}}:{{password}}
+
+
+### LatestIncidents
+# @name LatestIncidents_POST
+POST {{server}}/agent/LatestIncidents
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "83659689-1c8a-4b22-a74b-07ba80d547f3",
+  "customer": {
+    "ID": "33024833-8b63-4c42-8779-a79207b22b4e"
+  },
+  "title": "title-8365968",
+  "description": "description-8365968",
+  "status": {
+    "code": "S"
+  },
+  "urgency": {
+    "code": "C"
+  },
+  "severity": {
+    "code": 17644604
+  },
+  "comments": [
+    {
+      "ID": "9058298c-f1b1-4b67-914d-b7e85856fc3f",
+      "timestamp": "2003-10-13T00:00:00.000Z",
+      "author": "author.5e5fe@example.net",
+      "message": "message-9058298"
+    },
+    {
+      "ID": "90582991-90eb-4a1d-bdc7-e2d0cdc342f1",
+      "timestamp": "2020-12-05T00:00:00.000Z",
+      "author": "author.5e5ff@example.org",
+      "message": "message-9058299"
+    }
+  ],
+  "createdAt": "2021-11-18T00:00:00.000Z",
+  "createdBy": "createdBy.4zb80@example.net",
+  "modifiedAt": "2017-08-09T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.4zb80@example.org"
+}
+
+
+### LatestIncidents
+# @name LatestIncidents_PATCH
+PATCH {{server}}/agent/LatestIncidents/83659689-1c8a-4b22-a74b-07ba80d547f3
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "83659689-1c8a-4b22-a74b-07ba80d547f3",
+  "customer": {
+    "ID": "33024833-8b63-4c42-8779-a79207b22b4e"
+  },
+  "title": "title-8365968",
+  "description": "description-8365968",
+  "status": {
+    "code": "S"
+  },
+  "urgency": {
+    "code": "C"
+  },
+  "severity": {
+    "code": 17644604
+  },
+  "comments": [
+    {
+      "ID": "9058298c-f1b1-4b67-914d-b7e85856fc3f",
+      "timestamp": "2003-10-13T00:00:00.000Z",
+      "author": "author.5e5fe@example.net",
+      "message": "message-9058298"
+    },
+    {
+      "ID": "90582991-90eb-4a1d-bdc7-e2d0cdc342f1",
+      "timestamp": "2020-12-05T00:00:00.000Z",
+      "author": "author.5e5ff@example.org",
+      "message": "message-9058299"
+    }
+  ],
+  "createdAt": "2021-11-18T00:00:00.000Z",
+  "createdBy": "createdBy.4zb80@example.net",
+  "modifiedAt": "2017-08-09T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.4zb80@example.org"
+}
+
+
+### LatestIncidents
+# @name LatestIncidents_DELETE
+DELETE {{server}}/agent/LatestIncidents/83659689-1c8a-4b22-a74b-07ba80d547f3
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### IncidentStatus
+# @name IncidentStatus_GET
+GET {{server}}/agent/IncidentStatus
+Authorization: Basic {{username}}:{{password}}
+
+
+### Urgencies
+# @name Urgencies_GET
+GET {{server}}/agent/Urgencies
+Authorization: Basic {{username}}:{{password}}
+
+
+### Severities
+# @name Severities_GET
+GET {{server}}/agent/Severities
+Authorization: Basic {{username}}:{{password}}
+
+
+### AgentInformation
+# @name AgentInformation_GET
+GET {{server}}/agent/AgentInformation
+Authorization: Basic {{username}}:{{password}}
+
+
+### AgentInformation
+# @name AgentInformation_POST
+POST {{server}}/agent/AgentInformation
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "agentID": "30279252-64d1-4165-ad4f-f1da411f1339",
+  "agentFullName": "agentFullName-30279252",
+  "agentEmail": "B-mAZ~'/$qKue<~NF_Y_%7eQ45,&pI^B/%UkhEq7=giFId2JirK8q\",)m&I\"6W#;y~_D`T,R}Pz|U&S^,:nngpxo.*[MqH0ec@\"iM]xIl#XT2Nm\\}G\"51ok\"0/FOmDt%8THI+fVs%j}m$a.~M:`13*i4^t50`"
+}
+
+
+### AgentInformation
+# @name AgentInformation_PATCH
+PATCH {{server}}/agent/AgentInformation/30279252-64d1-4165-ad4f-f1da411f1339
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "agentID": "30279252-64d1-4165-ad4f-f1da411f1339",
+  "agentFullName": "agentFullName-30279252",
+  "agentEmail": "B-mAZ~'/$qKue<~NF_Y_%7eQ45,&pI^B/%UkhEq7=giFId2JirK8q\",)m&I\"6W#;y~_D`T,R}Pz|U&S^,:nngpxo.*[MqH0ec@\"iM]xIl#XT2Nm\\}G\"51ok\"0/FOmDt%8THI+fVs%j}m$a.~M:`13*i4^t50`"
+}
+
+
+### AgentInformation
+# @name AgentInformation_DELETE
+DELETE {{server}}/agent/AgentInformation/30279252-64d1-4165-ad4f-f1da411f1339
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

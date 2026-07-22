@@ -1,0 +1,6 @@
+ID,customer_ID,title,description,status_code,urgency_code,severity_code
+0d2275f3-5ed5-4ed8-9066-25d3b097338a,11111111-1111-4111-8111-111111111111,ERP-System nicht erreichbar,Seit 08:15 Uhr können keine Aufträge im ERP-System bearbeitet werden,P,C,5
+27bf4545-ebc2-483b-9afb-fdffac405180,22222222-2222-4222-8222-222222222222,VPN-Verbindung bricht ab,Die VPN-Verbindung wird nach wenigen Minuten automatisch getrennt,A,H,3
+10000000-0000-4000-8000-000000000003,33333333-3333-4333-8333-333333333333,Passwort zurücksetzen,Die Benutzerin kann sich nach mehreren Fehlversuchen nicht mehr anmelden,R,M,2
+10000000-0000-4000-8000-000000000004,44444444-4444-4444-8444-444444444444,Drucker im Vertrieb ohne Funktion,Der Netzwerkdrucker zeigt dauerhaft den Status Offline,S,L,1
+10000000-0000-4000-8000-000000000005,11111111-1111-4111-8111-111111111111,Phishing-E-Mail erhalten,Mehrere Mitarbeitende haben eine verdächtige E-Mail mit Anhang erhalten,O,H,4

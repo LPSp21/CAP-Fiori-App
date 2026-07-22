@@ -1,0 +1,5 @@
+up__ID,ID,timestamp,author,message
+0d2275f3-5ed5-4ed8-9066-25d3b097338a,30000000-0000-4000-8000-000000000001,2026-07-10T08:20:00Z,sabine.schulz@example.com,Störung wurde aufgenommen und an den technischen Support weitergeleitet.
+0d2275f3-5ed5-4ed8-9066-25d3b097338a,30000000-0000-4000-8000-000000000002,2026-07-10T08:45:00Z,thomas.braun@example.com,Die Verbindung zum ERP-Datenbankserver wird geprüft.
+27bf4545-ebc2-483b-9afb-fdffac405180,30000000-0000-4000-8000-000000000003,2026-07-10T09:10:00Z,thomas.braun@example.com,VPN-Client-Protokolle wurden angefordert.
+10000000-0000-4000-8000-000000000005,30000000-0000-4000-8000-000000000004,2026-07-10T09:30:00Z,jonas.richter@example.com,Betroffene Benutzer wurden über den Sicherheitsvorfall informiert.

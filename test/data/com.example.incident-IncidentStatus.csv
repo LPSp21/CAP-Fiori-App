@@ -1,0 +1,7 @@
+code,name,descr
+R,Reported,Incident was reported
+A,Assigned,Incident was assigned
+P,In Progress,Incident is being processed
+O,On Hold,Incident is on hold
+S,Resolved,Incident was resolved
+C,Closed,Incident was closed

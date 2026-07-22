@@ -1,0 +1,5 @@
+code,locale,name,descr
+C,de,Kritisch,Dringende Bearbeitung erforderlich
+H,de,Hoch,Hohe Dringlichkeit
+M,de,Mittel,Mittlere Dringlichkeit
+L,de,Niedrig,Niedrige Dringlichkeit
